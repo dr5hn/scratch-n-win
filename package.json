@@ -17,20 +17,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taylorbryant/next-starter-tailwind.git"
+    "url": "git+https://github.com/dr5hn/floras-kitchen.git"
   },
-  "author": "Taylor Bryant",
+  "author": "Darshan Gada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/taylorbryant/next-starter-tailwind/issues"
+    "url": "https://github.com/dr5hn/floras-kitchen/issues"
   },
-  "homepage": "https://github.com/taylorbryant/next-starter-tailwind#readme",
+  "homepage": "https://github.com/dr5hn/floras-kitchen#readme",
   "dependencies": {
-    "next": "9.5.3",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scratchcard": "^1.1.2",
-    "scratchcard-js": "^1.4.9"
+    "scratchcard-js": "^1.4.9",
+    "firebase": "^7.15.5",
+    "firebase-admin": "^8.12.1",
+    "js-cookie": "2.2.1",
+    "react-firebaseui": "4.1.0",
+    "swr": "0.2.3"
   },
   "devDependencies": {
     "rustywind": "0.6.7",
