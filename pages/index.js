@@ -56,13 +56,30 @@ const OfferPage = () => {
     })
   }
 
+  if (user && isRedeemed) {
+    return (
+      <Layout>
+        <div className="flex flex-col items-center justify-center text-center">
+          <img
+            src="scratch.png"
+            className="w-1/5"
+            alt="Four one-eyed aliens playing"
+          />
+          <br />
+          <h1>Welcome to Flora's Kitchen</h1>
+          <h2>Unfortunately, You've already availed for this offer.</h2>    
+        </div>
+      </Layout>
+    );
+  }
+
   if (user && !isRedeemed) {
     return (
       <Layout>
         <div className="flex flex-col items-center justify-center text-center">
           <img
             src="scratch.png"
-            className="w-2/5"
+            className="w-1/5"
             alt="Four one-eyed aliens playing"
           />
           <br />
@@ -134,32 +151,16 @@ const OfferPage = () => {
     );
   }
 
-  if (user && isRedeemed) {
+  if (!user) {
     return (
       <Layout>
         <div className="flex flex-col items-center justify-center text-center">
-          <img
-            src="scratch.png"
-            className="w-2/5"
-            alt="Four one-eyed aliens playing"
-          />
-          <br />
           <h1>Welcome to Flora's Kitchen</h1>
-          <p>Unfortunately, You've already availed for this offer.</p>    
+          <h2>Redirecting to signin...</h2>
         </div>
       </Layout>
     );
   }
-
-  return (
-    <Layout>
-      <div className="flex flex-col items-center justify-center text-center">
-        <h1>Welcome to Flora's Kitchen</h1>
-        <p>Redirecting to signin...</p>
-      </div>
-    </Layout>
-  );
-  
 }
 
 export default OfferPage;
