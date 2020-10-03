@@ -1,5 +1,5 @@
 import firebase from 'firebase/app'
-import 'firebase/analytics';
+// import 'firebase/analytics';
 import 'firebase/auth'
 
 const config = {
@@ -15,6 +15,6 @@ const config = {
 export default function initFirebase() {
   if (!firebase.apps.length) {
     firebase.initializeApp(config)
-    firebase.analytics()
+    // firebase.analytics()
   }
 }
