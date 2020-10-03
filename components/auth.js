@@ -16,16 +16,6 @@ const firebaseAuthConfig = {
     // https://github.com/firebase/firebaseui-web#configure-oauth-providers
     signInOptions: [
         {
-            // Google provider must be enabled in Firebase Console to support one-tap
-            // sign-up.
-            provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-            // Required to enable ID token credentials for this provider.
-            // This can be obtained from the Credentials page of the Google APIs
-            // console. Use the same OAuth client ID used for the Google provider
-            // configured with GCIP or Firebase Auth.
-            // clientId: 'xxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
-        },
-        {
             provider: firebase.auth.PhoneAuthProvider.PROVIDER_ID,
             recaptchaParameters: {
                 type: 'image', // 'audio'
@@ -37,7 +27,7 @@ const firebaseAuthConfig = {
             whitelistedCountries: ['IN']
         },
     ],
-    signInSuccessUrl: process.env.basePath + '/',
+    signInSuccessUrl: (!!process.env.basePath) ? process.env.basePath + '/' : '/',
     credentialHelper: 'none',
     callbacks: {
         signInSuccessWithAuthResult: async ({ user }, redirectUrl) => {
