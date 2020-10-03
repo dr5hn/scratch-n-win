@@ -27,8 +27,7 @@ const firebaseAuthConfig = {
             whitelistedCountries: ['IN']
         },
     ],
-    // signInSuccessUrl: '/', // Used in development
-    signInSuccessUrl: '/floras-kitchen', // Used in production
+    signInSuccessUrl: '/',
     credentialHelper: 'none',
     callbacks: {
         signInSuccessWithAuthResult: async ({ user }, redirectUrl) => {
