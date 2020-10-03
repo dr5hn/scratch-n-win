@@ -68,7 +68,7 @@ const OfferPage = () => {
           <br />
   
           <ScratchCard {...settings}>
-            <div className="p-3 my-8 text-3xl font-bold ext-center mx-auto">
+            <div className="p-3 mx-auto my-8 text-3xl font-bold ext-center">
               <h2>
                 Congratulations!! 🎉<br />
                 You've Won <br />

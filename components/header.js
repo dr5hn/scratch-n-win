@@ -9,7 +9,7 @@ const Header = () => {
   // const [isExpanded, toggleExpansion] = useState(false);
   
   return (
-    <header className="bg-teal-500 text-gray-700 body-font">
+    <header className="text-gray-700 bg-teal-500 body-font">
       <div className="flex flex-wrap items-center justify-between max-w-4xl p-4 mx-auto md:flex-no-wrap md:p-8">
         <div className="flex items-center">
           {/* <img
@@ -25,7 +25,7 @@ const Header = () => {
         </div>
 
         {/* <button
-          className="flex items-center   px-3 py-2 text-white border border-white rounded md:hidden"
+          className="flex items-center px-3 py-2 text-white border border-white rounded  md:hidden"
           onClick={() => toggleExpansion(!isExpanded)}
         >
           <svg
