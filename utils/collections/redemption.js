@@ -27,7 +27,13 @@ export const getRedemption = async (phone) => {
     
     return await q.get()
         .then(querySnapshot => {
-            return querySnapshot.size;
+            let d = querySnapshot.docs[0].data().timestamp.toDate()
+            let redeemedDate = d.getDate() + "-" + (d.getMonth() + 1) + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() 
+
+            return {
+                date: redeemedDate,
+                size: querySnapshot.size
+            }
         })
         .catch((err) => {
             // console.log(`Encountered error: ${err}`);

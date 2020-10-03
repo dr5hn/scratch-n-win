@@ -11,12 +11,15 @@ const OfferPage = () => {
   const [firePopper, setFirePopper] = useState(false);
   const [offerText, setOfferText] = useState('');
   const [finalText, setFinalText] = useState('');
+  const [wait, setWait] = useState(false);
+  const [redeemedDate, setRedeemedDate] = useState(false);
 
   if (user) {
     let redemption = getRedemption(user.phone);
     redemption.then((count) => {
-      if (count) {
+      if (count && count.size && !wait) {
         setIsRedeemed(true);
+        setRedeemedDate(count.date);
       }
       // console.log(count);
     })  
@@ -54,9 +57,10 @@ const OfferPage = () => {
       phone: user.phone,
       offer: offer
     })
+    setWait(true)
   }
 
-  if (user && isRedeemed) {
+  if (user && isRedeemed && !wait) {
     return (
       <Layout>
         <div className="flex flex-col items-center justify-center text-center">
@@ -67,7 +71,7 @@ const OfferPage = () => {
           />
           <br />
           <h1>Welcome to Flora's Kitchen</h1>
-          <h2>Unfortunately, You've already availed for this offer.</h2>    
+          <h2>Unfortunately, You've already availed for this offer on {redeemedDate}.</h2>    
         </div>
       </Layout>
     );
