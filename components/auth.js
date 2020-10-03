@@ -27,7 +27,8 @@ const firebaseAuthConfig = {
             whitelistedCountries: ['IN']
         },
     ],
-    signInSuccessUrl: (!!process.env.basePath) ? process.env.basePath + '/' : '/',
+    // signInSuccessUrl: '/', // Used in development
+    signInSuccessUrl: '/floras-kitchen', // Used in production
     credentialHelper: 'none',
     callbacks: {
         signInSuccessWithAuthResult: async ({ user }, redirectUrl) => {

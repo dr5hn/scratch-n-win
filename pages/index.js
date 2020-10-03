@@ -16,7 +16,7 @@ const OfferPage = () => {
     let redemption = getRedemption(user.phone);
     redemption.then((count) => {
       if (count) {
-        // setIsRedeemed(true);
+        setIsRedeemed(true);
       }
       // console.log(count);
     })  
