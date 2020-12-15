@@ -23,7 +23,7 @@ const firebaseAuthConfig = {
                 badge: 'bottomright' //' bottomright' or 'inline' applies to invisible.
             },
             defaultCountry: 'IN',
-            loginHint: '+919029208698',
+            loginHint: '',
             whitelistedCountries: ['IN']
         },
     ],
